@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>かなえの小論文添削教室</title>
+  <meta name="description" content="大学入試・就職・公務員などの小論文をオンラインで丁寧に添削します。構成・論旨・表現の改善点を分かりやすくフィードバックします。" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- シンプルなロゴ -->
+        <svg width="42" height="42" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="48" fill="#2b8a9e"/>
+          <text x="50%" y="56%" font-size="46" text-anchor="middle" fill="#fff" font-family="sans-serif">か</text>
+        </svg>
+        <h1>かなえの小論文添削教室</h1>
+      </div>
+      <nav class="main-nav" aria-label="メインナビゲーション">
+        <a href="#service">サービス</a>
+        <a href="#how">使い方</a>
+        <a href="#price">料金</a>
+        <a href="#contact">依頼する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>伝わる文章に、添削で「かなえる」</h2>
+        <p>あなたの小論文を丁寧に読み、構成・論理の筋道・表現の改善点を具体的に指摘します。大学入試・公務員試験・就職の志望動機まで対応。</p>
+        <p class="cta"><a class="button" href="#contact">今すぐ依頼する</a></p>
+      </div>
+    </section>
+
+    <section id="service" class="container section">
+      <h3>サービス内容</h3>
+      <ul class="features">
+        <li><strong>構成チェック：</strong>導入・結論の明確さ、段落ごとの役割を確認します。</li>
+        <li><strong>論理・事例の妥当性：</strong>主張と根拠のつながりを評価します。</li>
+        <li><strong>表現の改善：</strong>語彙・文法・読みやすさを具体的に提案します。</li>
+        <li><strong>添削レポート：</strong>要点をまとめたフィードバックを PDF 形式で提供（オプション）。</li>
+      </ul>
+    </section>
+
+    <section id="how" class="container section">
+      <h3>使い方（簡単3ステップ）</h3>
+      <ol>
+        <li>依頼フォームに名前、メール、提出期限、本文（または添付）を入力</li>
+        <li>添削完了後、メールでフィードバック／添削済み本文を受け取る</li>
+        <li>必要に応じて再添削（別料金）</li>
+      </ol>
+
+      <h4>添削サンプル（Before → After）</h4>
+      <div class="sample">
+        <div class="sample-item">
+          <h5>Before</h5>
+          <p>私が志望する理由は、御社の成長に貢献したいからです。これまでの経験を生かして働きたいです。</p>
+        </div>
+        <div class="sample-item">
+          <h5>After（添削例）</h5>
+          <p>私は、御社の持つ○○技術を用いて、△△の分野で価値を創出したいと考えています。学生時代に□□のプロジェクトで得た経験（具体例）を活かし、御社の××に貢献します。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="price" class="container section">
+      <h3>料金</h3>
+      <ul class="prices">
+        <li>簡易添削（〜800字）：2,000円</li>
+        <li>詳しい添削＋コメント（〜1600字）：4,000円</li>
+        <li>添削＋PDFレポート（オプション）：+1,000円</li>
+      </ul>
+      <p class="note">※料金はサンプルです。運用時に調整してください。</p>
+    </section>
+
+    <section id="contact" class="container section">
+      <h3>添削を依頼する</h3>
+      <form id="essay-form" class="form" novalidate>
+        <label>
+          お名前（必須）
+          <input type="text" name="name" id="name" required />
+        </label>
+
+        <label>
+          メールアドレス（必須）
+          <input type="email" name="email" id="email" required />
+        </label>
+
+        <label>
+          希望納期
+          <select name="deadline" id="deadline">
+            <option value="3days">3日以内</option>
+            <option value="7days" selected>7日以内</option>
+            <option value="14days">14日以内</option>
+          </select>
+        </label>
+
+        <label>
+          小論文タイトル
+          <input type="text" name="title" id="title" />
+        </label>
+
+        <label>
+          小論文本文（テキストで貼り付け、またはファイルで添付）
+          <textarea name="essay" id="essay" rows="12" placeholder="ここに本文を貼り付けてください"></textarea>
+        </label>
+
+        <label>
+          添付ファイル（任意）
+          <input type="file" id="file" name="file" accept=".txt,.pdf,.doc,.docx" />
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="button primary">添削を依頼する</button>
+          <button type="button" id="save-draft" class="button">下書き保存</button>
+        </div>
+
+        <p class="form-note">※このデモでは、送信はローカルに保存されます。実際の運用時は送信先を設定してください。</p>
+      </form>
+
+      <div id="form-result" class="form-result" aria-live="polite" hidden></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© かなえの小論文添削教室</p>
+      <p><small>個人情報の取り扱いについては、運用時にプライバシーポリシーを用意してください。</small></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
